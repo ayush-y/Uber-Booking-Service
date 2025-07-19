@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: UberBookingService
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/Uber_Db_Local
+    username: root
+    password: Ayush@800
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        enable_lazy_load_no_trans: true
+
+  jmx:
+    enabled: false
+
+  flyway:
+    url: jdbc:mysql://localhost:3306/Uber_Db_Local
+    user: root
+    password: Ayush@800
+    enabled: false
+
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+
+server:
+  port: 8000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+
+logging:
+  level:
+    org.springframework.data: DEBUG
+
+
