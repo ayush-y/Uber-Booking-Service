@@ -24,7 +24,7 @@ public class RetrofitConfig {
     public LocationServiceApi locationServiceApi() {
 
         return new Retrofit.Builder()
-                .baseUrl(getServiceUrl("UBERPROJECT-LOCATIONSERVICE"))
+                .baseUrl(getServiceUrl("UBERPROJECT-LOCATIONSERVICE")) //Used eureka service to async communication b/w two microservices
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(new OkHttpClient.Builder().build())
                 .build()
